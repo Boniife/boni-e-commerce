@@ -19,7 +19,7 @@ const queryMap = {
   orders: {
     query: ORDER,
     key: 'Orders',
-  },
+  }
 }
 
 export const fetchDoc = async <T>(args: {
@@ -29,6 +29,7 @@ export const fetchDoc = async <T>(args: {
   draft?: boolean
 }): Promise<T> => {
   const { collection, slug, draft } = args || {}
+ 
 
   if (!queryMap[collection]) throw new Error(`Collection ${collection} not found`)
 
